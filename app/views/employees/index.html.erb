@@ -1,0 +1,25 @@
+<%= render "ui/dashboard" do %>
+  <p style="color: green"><%= notice %></p>
+
+  <% content_for :title, "Employees" %>
+  <h1>Employees</h1>
+
+  <input type="text" placeholder="Search Employee" class="input input-sm outline-none" />
+
+  <button class="btn btn-xs">Import</button>
+  <button class="btn btn-xs">Export</button>
+
+  <button class="btn btn-xs">Add Employee</button>
+
+  <div id="employees">
+    <% @employees.each do |employee| %>
+      <%= render employee %>
+      <p>
+        <%= link_to "Show this employee", employee %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New employee", new_employee_path %>
+<% end %>
+

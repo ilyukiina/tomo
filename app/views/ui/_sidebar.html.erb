@@ -1,0 +1,66 @@
+<div class="drawer lg:drawer-open">
+  <input id="left-sidebar-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content p-2">
+    <%= yield %>
+    <label for="left-sidebar-drawer" class="btn drawer-button lg:hidden">
+      Open drawer
+    </label>
+  </div>
+  <div class="drawer-side">
+    <label for="left-sidebar-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+    <ul class="menu bg-base-300 min-h-full w-80 p-1">
+      <!-- Sidebar content here -->
+      <li>
+        <div class="dropdown">
+          <div tabindex="0">Centennial Food</div>
+          <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+            <li><a>Item 1</a></li>
+            <li><a>Item 2</a></li>
+          </ul>
+        </div>
+      </li>
+      <p class="text-xs mx-3 my-1 font-semibold">Overview</p>
+      <li class="text-sm"><a>Feed</a></li>
+      <li class="text-sm"><a>Tracking</a></li>
+      <p class="text-xs mx-3 my-1 font-semibold">Main Modules</p>
+      <li class="text-sm"><a>Employees</a></li>
+      <li class="text-sm"><a>Inventory</a></li>
+      <li class="text-sm"><a>Warehouse</a></li>
+      <li class="text-sm"><a>Visits</a></li>
+      <li class="text-sm"><a>Expenses</a></li>
+      <li class="text-sm"><a>Reports</a></li>
+      <li class="text-sm">
+        <details open>
+          <summary>Administrator</summary>
+          <ul>
+            <li><a>Accounts Center</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </details>
+      </li>
+      <li class="mt-auto">
+        <div class="dropdown">
+          <div tabindex="0" class="flex item-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded">
+                <img
+                  src="https://img.daisyui.com/images/profile/demo/superperson@192.webp"
+                  alt="Tailwind-CSS-Avatar-component"
+                />
+              </div>
+            </div>
+
+            <div>
+              <h1 class="text-sm font-semibold">John Doe</h1>
+              <p class="text-xs">Administrator</p>
+            </div>
+          </div>
+          <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+            <li><a>Item 1</a></li>
+            <li><a>Item 2</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
